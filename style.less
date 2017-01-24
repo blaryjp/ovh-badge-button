@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+
+@darkblue: #273b54;
+@green: #2ecc71;
+@yellow: #fc0;
+
+
+#real {
+  .login,
+  .ovh-dash {
+    display: none;
+  }
+
+  .debug {
+    margin: 50px 0;
+  }
+}
+
+
+.ovh-dash {
+
+  .ctnr-outside {
+    width: 298px;
+    height: 98px;
+    border-radius: 300px;
+    background: white;
+    border: 1px solid #aaa;
+    box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.5);
+  }
+  .ctnr-inside {
+    width: 292px;
+    height: 92px;
+    margin: 2px;
+    border-radius: 300px;
+    border: 1px solid #131b25;
+    background: @darkblue;
+    overflow: hidden;
+  }
+
+  .left-ctnr {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    //float: left;
+    width: 94px;
+    height: 94px;
+  }
+
+  .right-ctnr {
+    display: inline-block;
+    vertical-align: top;
+    padding: 11px 0 10px;
+    font-family: "lato", sans-serif;
+    color: white;
+
+    .txt-sep {
+      width: 50px;
+      height: 3px;
+      margin: 3px 0;
+      background: @yellow;
+    }
+    .txt-2 {
+      font-weight: 400;
+      font-size: 18px
+    }
+    .txt-3 {
+      font-weight: 300;
+      font-size: 12px
+    }
+  }
+}
+
+
+.btn-dash {
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  height: 70px;
+  width: 70px;
+  margin: 11px 10px 11px 14px;
+  border-radius: 50%;
+  background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+  background-image: linear-gradient(top, #f4f1ee, #fff);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+  //-webkit-transition: all .1s linear;
+  //transition: all .1s linear;
+
+  .btn-dash-loader {
+    opacity: 0;
+    transition: all 1s linear;
+  }
+
+  &:disabled {
+    cursor: default;
+
+    .btn-dash-loader {
+      opacity: 1;
+    }
+  }
+
+  &:not(:disabled) {
+    &:hover {
+      background-image: -webkit-linear-gradient(top, #fff, #f4f1ee);
+      background-image: linear-gradient(top, #fff, #f4f1ee);
+    }
+    &:active {
+      background-image: -webkit-linear-gradient(top, #efedec, #f7f4f4);
+      background-image: linear-gradient(top, #efedec, #f7f4f4);
+      box-shadow: 0 3px 5px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+    }
+  }
+}
+
+
+.success-wrapper {
+
+  position: absolute;
+  top: 6px;
+  left: 9px;
+  display: none;
+
+  // credits: https://codepen.io/brettgardner/pen/grKyBd
+  width: 70px;
+  height: 70px;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: @darkblue;
+  overflow: hidden;
+
+  .innerCircle {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    margin: auto auto;
+    background-color: @darkblue;
+    width: 62px;
+    height: 62px;
+    display: block;
+    border-radius: 50%;
+  }
+  .mask {
+    content:" ";
+    position: absolute;
+    right: 0px;
+    height: 70px;
+    width: 35px;
+    border-radius: 0 34px 34px 0px;
+    background-color: @darkblue;
+    transition-delay: .3s;
+  }
+  .spinner {
+    content:" ";
+    position:absolute;
+    top:1px;
+    right:1px;
+    border-radius: 0 34px 34px 0px;
+    height:68px;
+    width:34px;
+    background-color: @green;
+    transform-origin: left center;
+  }
+  .filler {
+    content:" ";
+    position:absolute;
+    opacity:0;
+    top:1px;
+    left:1px;
+    border-radius: 34px 0px 0px 34px;
+    height:68px;
+    width:34px;
+    background-color: @green;
+    transform-origin: left center;
+    transition-delay: .3s;
+  }
+  .check {
+    opacity:0;
+    width:15px;
+    max-height: 35px;
+    position: absolute;
+    right: 56px;
+    bottom: 33px;
+    border-bottom:4px solid @green;
+    border-left:4px solid @green;
+    transform: scaleX(-1) rotate(-45deg);
+    transform-origin: right bottom;
+  }
+
+  &.start {
+    .check {
+      animation: check .6s cubic-bezier(.87,-.41,.19,1.44) .6s forwards;
+    }
+    .spinner {
+      animation: rotate .6s linear;
+    }
+    .mask {
+      opacity: 0;
+    }
+    .filler {
+      opacity: 1;
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  @keyframes check {
+    0% {
+      opacity:1;
+      width:0px;
+      height:0px;
+    }
+    50% {
+      width:15px;
+      height:0px;
+    }
+    100% {
+      opacity:1;
+      height:35px;
+    }
+  }
+}
+
+

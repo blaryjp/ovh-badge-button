@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+#real .login,
+#real .ovh-dash {
+  display: none;
+}
+#real .debug {
+  margin: 50px 0;
+}
+.ovh-dash .ctnr-outside {
+  width: 298px;
+  height: 98px;
+  border-radius: 300px;
+  background: white;
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.5);
+}
+.ovh-dash .ctnr-inside {
+  width: 292px;
+  height: 92px;
+  margin: 2px;
+  border-radius: 300px;
+  border: 1px solid #131b25;
+  background: #273b54;
+  overflow: hidden;
+}
+.ovh-dash .left-ctnr {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 94px;
+  height: 94px;
+}
+.ovh-dash .right-ctnr {
+  display: inline-block;
+  vertical-align: top;
+  padding: 11px 0 10px;
+  font-family: "lato", sans-serif;
+  color: white;
+}
+.ovh-dash .right-ctnr .txt-sep {
+  width: 50px;
+  height: 3px;
+  margin: 3px 0;
+  background: #ffcc00;
+}
+.ovh-dash .right-ctnr .txt-2 {
+  font-weight: 400;
+  font-size: 18px;
+}
+.ovh-dash .right-ctnr .txt-3 {
+  font-weight: 300;
+  font-size: 12px;
+}
+.btn-dash {
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  height: 70px;
+  width: 70px;
+  margin: 11px 10px 11px 14px;
+  border-radius: 50%;
+  background-image: -webkit-linear-gradient(top, #f4f1ee, #ffffff);
+  background-image: linear-gradient(top, #f4f1ee, #ffffff);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204, 198, 197, 0.5);
+}
+.btn-dash .btn-dash-loader {
+  opacity: 0;
+  transition: all 1s linear;
+}
+.btn-dash:disabled {
+  cursor: default;
+}
+.btn-dash:disabled .btn-dash-loader {
+  opacity: 1;
+}
+.btn-dash:not(:disabled):hover {
+  background-image: -webkit-linear-gradient(top, #ffffff, #f4f1ee);
+  background-image: linear-gradient(top, #ffffff, #f4f1ee);
+}
+.btn-dash:not(:disabled):active {
+  background-image: -webkit-linear-gradient(top, #efedec, #f7f4f4);
+  background-image: linear-gradient(top, #efedec, #f7f4f4);
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.4), inset 0px -3px 1px 1px rgba(204, 198, 197, 0.5);
+}
+.success-wrapper {
+  position: absolute;
+  top: 6px;
+  left: 9px;
+  display: none;
+  width: 70px;
+  height: 70px;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: #273b54;
+  overflow: hidden;
+}
+.success-wrapper .innerCircle {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  margin: auto auto;
+  background-color: #273b54;
+  width: 62px;
+  height: 62px;
+  display: block;
+  border-radius: 50%;
+}
+.success-wrapper .mask {
+  content: " ";
+  position: absolute;
+  right: 0px;
+  height: 70px;
+  width: 35px;
+  border-radius: 0 34px 34px 0px;
+  background-color: #273b54;
+  transition-delay: .3s;
+}
+.success-wrapper .spinner {
+  content: " ";
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  border-radius: 0 34px 34px 0px;
+  height: 68px;
+  width: 34px;
+  background-color: #2ecc71;
+  transform-origin: left center;
+}
+.success-wrapper .filler {
+  content: " ";
+  position: absolute;
+  opacity: 0;
+  top: 1px;
+  left: 1px;
+  border-radius: 34px 0px 0px 34px;
+  height: 68px;
+  width: 34px;
+  background-color: #2ecc71;
+  transform-origin: left center;
+  transition-delay: .3s;
+}
+.success-wrapper .check {
+  opacity: 0;
+  width: 15px;
+  max-height: 35px;
+  position: absolute;
+  right: 56px;
+  bottom: 33px;
+  border-bottom: 4px solid #2ecc71;
+  border-left: 4px solid #2ecc71;
+  transform: scaleX(-1) rotate(-45deg);
+  transform-origin: right bottom;
+}
+.success-wrapper.start .check {
+  animation: check 0.6s cubic-bezier(0.87, -0.41, 0.19, 1.44) 0.6s forwards;
+}
+.success-wrapper.start .spinner {
+  animation: rotate .6s linear;
+}
+.success-wrapper.start .mask {
+  opacity: 0;
+}
+.success-wrapper.start .filler {
+  opacity: 1;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes check {
+  0% {
+    opacity: 1;
+    width: 0px;
+    height: 0px;
+  }
+  50% {
+    width: 15px;
+    height: 0px;
+  }
+  100% {
+    opacity: 1;
+    height: 35px;
+  }
+}

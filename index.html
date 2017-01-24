@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>OVH Dash Button</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <link href="https://code.jquery.com/ui/jquery-ui-git.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-git.js"></script>
+    <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+  </head>
+  <body>
+
+    <h1>OVH Dash Button</h1>
+
+    <hr><br>
+
+    <div id="demo">
+
+      <h2>DEMO</h2>
+      <p>This is a demo, nothing will be ordered :).</p>
+
+      <div class="ovh-dash">
+        <div class="ctnr-outside">
+          <div class="ctnr-inside">
+
+            <div class="left-ctnr">
+
+              <button class="btn-dash" type="button" title="Order in one-click!">
+                <div class="btn-dash-loader"><svg width='24px' height='24px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-default"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(0 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(30 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.08333333333333333s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(60 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.16666666666666666s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(90 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.25s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(120 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.3333333333333333s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(150 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.4166666666666667s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(180 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.5s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(210 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.5833333333333334s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(240 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.6666666666666666s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(270 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.75s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(300 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.8333333333333334s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(330 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.9166666666666666s' repeatCount='indefinite'/></rect></svg></div>
+              </button>
+
+              <div class="success-wrapper">
+                <div class="spinner"></div>
+                <div class="mask"></div>
+                <div class="filler"></div>
+                <div class="innerCircle"></div>
+                <div class="check"></div>
+              </div>
+
+            </div>
+            <div class="right-ctnr">
+              <div class="txt-1">
+                <img width="120" src="data:image/png;base64,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" alt="">
+              </div>
+              <div class="txt-2">
+                MG-128 <small>(BHS)</small>
+              </div>
+              <div class="txt-sep"></div>
+              <div class="txt-3">
+                199.99 € HT/mois
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <br><br><br><hr><br>
+
+    <div id="real">
+
+      <h2>WORKING EXAMPLE</h2>
+
+      <p style="color: red;">Warning: if you click on the button, you will order <u>in one-click</u> a DBaaS Time Series!</p>
+      <!--<p>Of course, to work in one-click, you need to be logged, and have autorenew2016 activated.</p>-->
+
+      <div class="loading"><i>Loading... Please wait...</i></div>
+
+      <div class="login">
+        <button type="button">LOGIN</button>
+      </div>
+
+      <div class="ovh-dash">
+        <div class="ctnr-outside">
+          <div class="ctnr-inside">
+
+            <div class="left-ctnr">
+
+              <button class="btn-dash" type="button" title="Order in one-click!">
+                <div class="btn-dash-loader"><svg width='24px' height='24px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-default"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(0 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(30 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.08333333333333333s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(60 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.16666666666666666s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(90 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.25s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(120 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.3333333333333333s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(150 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.4166666666666667s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(180 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.5s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(210 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.5833333333333334s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(240 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.6666666666666666s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(270 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.75s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(300 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.8333333333333334s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#273b54' transform='rotate(330 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.9166666666666666s' repeatCount='indefinite'/></rect></svg></div>
+              </button>
+
+              <div class="success-wrapper">
+                <div class="spinner"></div>
+                <div class="mask"></div>
+                <div class="filler"></div>
+                <div class="innerCircle"></div>
+                <div class="check"></div>
+              </div>
+
+            </div>
+            <div class="right-ctnr">
+              <div class="txt-1">
+                <img width="120" src="data:image/png;base64,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" alt="">
+              </div>
+              <div class="txt-2">
+                DBaaS Time Series
+              </div>
+              <div class="txt-sep"></div>
+              <div class="txt-3">
+                0 € (Pay As You Go)
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="debug">
+        <h4>Debug:</h4>
+      </div>
+
+    </div>
+
+
+  </body>
+</html>
